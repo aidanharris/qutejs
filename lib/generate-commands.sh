@@ -19,7 +19,7 @@ cd "$QUTE_DIR/qutebrowser" || exit 1
 other_commands=("$(grep -RP '@cmdutils.*name=' | grep -ohP "name=(\"|').*?(\"|')" | cut -c 7- | rev | cut -c 2- | rev)")
 
 commands=($(grep -RP '@cmdutils.*' -a1   | \
-  grep -ohE 'def [a-Za-z].*\(' | \
+  grep -ohE 'def [A-Za-z].*\(' | \
   cut -c 5-                    | \
   rev                          | \
   cut -c 2-                    | \
