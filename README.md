@@ -5,6 +5,8 @@
 
 See the [examples](https://github.com/aidanharris/qutejs/tree/master/examples) for usage.
 
+NOTE: Commands are camel-cased e.g the command `adblock-update` becomes `adblockUpdate` as shown in [examples/adblockupdate.js](https://github.com/aidanharris/qutejs/blob/master/examples/adblockupdate.js).
+
 [npm-image]: https://badge.fury.io/js/qutejs.svg
 [npm-url]: https://npmjs.org/package/qutejs
 [travis-image]: https://travis-ci.org/aidanharris/qutejs.svg?branch=master
