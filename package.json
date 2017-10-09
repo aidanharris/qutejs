@@ -2,5 +2,11 @@
   "name": "qutejs",
   "version": "1.0.1",
   "main": "index.js",
-  "license": "CC0-1.0"
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "ava": "^0.22.0"
+  },
+  "scripts": {
+    "test": "QUTE_FIFO=\"$(mktemp)\" ava -s -c1"
+  }
 }
