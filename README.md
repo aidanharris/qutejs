@@ -3,9 +3,21 @@
 
 ## Usage
 
-See the [examples](https://github.com/aidanharris/qutejs/tree/master/examples) for usage.
+```js
+const qutejs = require('qutejs');
+
+qutejs.jseval([], function () {
+  alert('Hello World');
+});
+```
+
+See the [examples](https://github.com/aidanharris/qutejs/tree/master/examples) for some basic examples.
 
 NOTE: Commands are camel-cased e.g the command `adblock-update` becomes `adblockUpdate` as shown in [examples/adblockupdate.js](https://github.com/aidanharris/qutejs/blob/master/examples/adblockupdate.js).
+
+Commands take either multiple function arguments or an array of options. There is one special case being jseval (as shown above).
+
+The jseval function allows you to pass a function as the second argument which is parsed by qutejs. If the function is undefined we will assume the javascript to be executed is contained within the options array.
 
 ### Running extra commands
 
