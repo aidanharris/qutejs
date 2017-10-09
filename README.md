@@ -1,5 +1,5 @@
 # qutejs [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> A library for building qutebrowser usersripts with nodejs
+> A library for building qutebrowser userscripts with nodejs
 
 ## Usage
 
