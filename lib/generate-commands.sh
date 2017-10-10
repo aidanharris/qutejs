@@ -48,14 +48,14 @@ do
   javascriptCommands["$i"]=$(sed -e 's/-/_/g' -e 's/_\(.\)/_\u\1/g' -e 's/_//g' <<< "${commands[$i]}")
 done
 
-js=$(printf "${javascriptCommands[*]}" | sed 's/\s/\n/g')
-cmds=$(printf "${commands[*]}" | sed 's/\s/\n/g')
+js=$(printf "%s" "${javascriptCommands[*]}" | sed 's/\s/\n/g')
+cmds=$(printf "%s" "${commands[*]}" | sed 's/\s/\n/g')
 
 cd "$OLDPWD" || exit 1
 
 JSON="$(jq -n -c -M --arg cmds "$cmds" --arg js "$js" '{"commands": ($cmds|split("\n")),"jsCommands": ($js|split("\n"))}')"
 
-if [[ "$@" != *"-q"* ]] && [[ "$1" != *"--quiet"* ]]
+if [[ "$1" != *"-q"* ]] && [[ "$1" != *"--quiet"* ]]
 then
   echo "$JSON" | jq
 fi
