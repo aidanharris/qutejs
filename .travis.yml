@@ -7,9 +7,9 @@ script:
   - set -e
   - cd lib
   - rm -rfv commands.json
-  - git clone https://github.com/qutebrowser/qutebrowser
+  - git clone https://github.com/qutebrowser/qutebrowser.git
   - chmod +x generate-commands.sh && ./generate-commands.sh
-  - docker run -it --rm -v "$PWD:$PWD" -w "$PWD" koalaman/shellcheck:v0.4.6 shellcheck lib/generate-commands.sh
+  - docker run -it --rm -v "$PWD:$PWD" -w "$PWD" koalaman/shellcheck:v0.4.6 shellcheck generate-commands.sh
   - cd ../
   - yarn
   - yarn test
