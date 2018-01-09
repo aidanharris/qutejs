@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - 8.6.0  # latest
-  - 6.11.4 # lts
+  - 9.3.0  # latest
+  - 8.9.4 # lts
 
 script:
   - set -e
