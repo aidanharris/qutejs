@@ -9,7 +9,7 @@ script:
   - rm -rfv commands.json
   - git clone https://github.com/qutebrowser/qutebrowser.git
   - chmod +x generate-commands.sh && ./generate-commands.sh
-  - docker run -it --rm -v "$PWD:$PWD" -w "$PWD" base/archlinux sh -c  "set -e;pacman -Syu --noconfirm &> /dev/null;pacman -S shellcheck --noconfirm &> /dev/null;shellcheck generate-commands.sh"
+  - docker run -it --rm -v "$PWD:$PWD" -w "$PWD" base/archlinux sh -c  "set -e;pacman -Syu --noconfirm &> /dev/null;pacman -S shellcheck --noconfirm &> /dev/null;shellcheck --exclude=SC2206,SC2207 generate-commands.sh"
   - cd ../
   - yarn
   - yarn test
